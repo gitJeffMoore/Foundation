@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ci.foundation</groupId>
+    <artifactId>cifoundation</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+  
+    <organization>
+        <name></name>
+        <url></url>
+    </organization>
+
+    <modules>
+        <module></module>
+    </modules>
+    
+    <scm>
+        <connection>scm:git:git@github.com:gitJeffMoore/Foundation.git</connection>
+        <developerConnection>scm:git:git@github.com:gitJeffMoore/Foundation.git</developerConnection>
+        <url>https://github.com/gitJeffMoore/Foundation</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id></id>
+            <url></url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id></id>
+            <url></url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+		    <cq.host.scheme>http</cq.host.scheme>
+        <cq.library.version>5.0.2</cq.library.version>
+        <core.name></core.name>
+        <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss.SSSZ</maven.build.timestamp.format>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.junit.usefile>false</maven.junit.usefile>
+        <config.clientlibCacheKey>${buildNumber}</config.clientlibCacheKey>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <crx.skip>true</crx.skip>
+                <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
+                <cq.username></cq.username>
+                <cq.package.group></cq.package.group>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>local</id>
+            <activation>
+                <property>
+                    <name>local</name>
+                </property>
+            </activation>
+            <properties>
+                <crx.skip>false</crx.skip>
+                <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
+                <cq.host>localhost</cq.host>
+                <cq.port>4502</cq.port>
+                <cq.port.author>4502</cq.port.author>
+                <cq.port.publish>4503</cq.port.publish>
+                <cq.user>admin</cq.user>
+                <cq.username>admin</cq.username>
+                <cq.password>admin</cq.password>
+                <cq.package.group>CIFoundation</cq.package.group>
+                <amway.env.name>dev</amway.env.name>
+            </properties>
+        </profile>
+  
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <version>1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.4.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+                <version>1.15.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.2</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <buildNumberPropertyName>buildNumber</buildNumberPropertyName>
+                    <timestampPropertyName>buildTimestamp</timestampPropertyName>
+                    <doCheck>false</doCheck>
+                    <doUpdate>false</doUpdate>
+                    <timestampFormat>{0, date, yyyy-MM-dd HH:mm:ss}</timestampFormat>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId></groupId>
+                <artifactId></artifactId>
+                <version></version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
