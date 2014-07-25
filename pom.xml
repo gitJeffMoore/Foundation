@@ -10,12 +10,10 @@
 
   
     <organization>
-        <name></name>
-        <url></url>
     </organization>
 
     <modules>
-        <module></module>
+        
     </modules>
     
     <scm>
@@ -26,15 +24,13 @@
 
     <repositories>
         <repository>
-            <id></id>
-            <url></url>
+
         </repository>
     </repositories>
 
     <pluginRepositories>
         <pluginRepository>
-            <id></id>
-            <url></url>
+
         </pluginRepository>
     </pluginRepositories>
 
@@ -148,9 +144,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId></groupId>
-                <artifactId></artifactId>
-                <version></version>
             </dependency>
         </dependencies>
     </dependencyManagement>
