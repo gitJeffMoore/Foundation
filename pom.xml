@@ -22,19 +22,18 @@
         <url>https://github.com/gitJeffMoore/Foundation</url>
     </scm>
 
-    <repositories>
+     <distributionManagement>
         <repository>
-	    <id>AmwayNexusRepository</id>
+            <id>AmwayNexusRepository</id>
             <name>Amway Nexus Release Repository</name>
             <url>http://nexus.intranet.local:8080/content/repositories/releases/</url>
         </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-
-        </pluginRepository>
-    </pluginRepositories>
+        <snapshotRepository>
+            <id>AmwayNexusRepository</id>
+            <name>Amway Nexus Snapshot Repository</name>
+            <url>http://nexus.intranet.local:8080/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
 		    <cq.host.scheme>http</cq.host.scheme>
@@ -143,10 +142,4 @@
         </plugins>
     </build>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>
