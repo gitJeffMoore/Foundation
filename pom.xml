@@ -5,7 +5,7 @@
     <groupId>ci.foundation</groupId>
     <artifactId>cifoundation</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
 
   
     <organization>
@@ -19,7 +19,7 @@
         <connection>scm:git:git@github.com:gitJeffMoore/Foundation.git</connection>
         <developerConnection>scm:git:git@github.com:gitJeffMoore/Foundation.git</developerConnection>
         <url>https://github.com/gitJeffMoore/Foundation</url>
-      <tag>release-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
      <distributionManagement>
