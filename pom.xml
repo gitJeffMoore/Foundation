@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>ci.foundation</groupId>
     <artifactId>cifoundation</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
   
     <organization>
@@ -20,24 +19,26 @@
         <connection>scm:git:git@github.com:gitJeffMoore/Foundation.git</connection>
         <developerConnection>scm:git:git@github.com:gitJeffMoore/Foundation.git</developerConnection>
         <url>https://github.com/gitJeffMoore/Foundation</url>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
-    <repositories>
+     <distributionManagement>
         <repository>
-
+            <id>AmwayNexusRepository</id>
+            <name>Amway Nexus Release Repository</name>
+            <url>http://nexus.intranet.local:8080/content/repositories/releases/</url>
         </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-
-        </pluginRepository>
-    </pluginRepositories>
+        <snapshotRepository>
+            <id>AmwayNexusRepository</id>
+            <name>Amway Nexus Snapshot Repository</name>
+            <url>http://nexus.intranet.local:8080/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
 		    <cq.host.scheme>http</cq.host.scheme>
         <cq.library.version>5.0.2</cq.library.version>
-        <core.name></core.name>
+        <core.name />
         <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss.SSSZ</maven.build.timestamp.format>
         <timestamp>${maven.build.timestamp}</timestamp>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,8 +56,8 @@
             <properties>
                 <crx.skip>true</crx.skip>
                 <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
-                <cq.username></cq.username>
-                <cq.package.group></cq.package.group>
+                <cq.username />
+                <cq.package.group />
             </properties>
         </profile>
 
@@ -141,10 +142,4 @@
         </plugins>
     </build>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>
