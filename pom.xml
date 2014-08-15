@@ -139,6 +139,19 @@
                     <timestampFormat>{0, date, yyyy-MM-dd HH:mm:ss}</timestampFormat>
                 </configuration>
             </plugin>
+			<plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m1</version>
+                <configuration>
+                    <flowInitContext>
+                        <featureBranchPrefix>feature-</featureBranchPrefix>
+                        <releaseBranchPrefix>release-</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+                    </flowInitContext>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+			</plugin>
         </plugins>
     </build>
 
