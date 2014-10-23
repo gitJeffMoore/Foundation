@@ -23,7 +23,6 @@
   </scm>
 
     <properties>
-		    <cq.host.scheme>http</cq.host.scheme>
         <cq.library.version>5.0.2</cq.library.version>
         <core.name />
         <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss.SSSZ</maven.build.timestamp.format>
